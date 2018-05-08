@@ -1,0 +1,27 @@
+=牛牛
+
+miniSNS
+
+==Features
+
+  * miniSNS
+  * simple UI
+  * base on Python + Django
+
+==Install
+  1. Python 2.7
+  2. Django 1.9.2
+  3. MySQL-python 
+  4. PIL
+  5. uwsgi 2.0.17
+  6.django-crispy-forms>=1.6.0
+  7.django-import-export>=0.5.1
+  8.django-reversion>=2.0.0
+  9.django-formtools==1.0
+  10.future==0.15.2
+  11.httplib2==0.9.2
+  12.six==1.10.0
+
+
+
+

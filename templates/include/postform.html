@@ -1,0 +1,19 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<div id="post-message" class="form">
+    <form method="post" action="/">                
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="word-count"></td>
+            </tr>
+        </table>
+        <div class="input">
+            <textarea name="message" placeholder="记录你的生活。。。" class="text" rows="4"></textarea>
+        </div>
+        <div class="buttons">
+            <button type="submit" class="submit wide">发布</button>
+        </div>
+    </form>
+</div>
