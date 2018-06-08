@@ -44,10 +44,10 @@ urlpatterns = [
     url(r'^user/$',yonghu.views.index),
     # url(r'^user/(?P<_username>[a-zA-Z\-_\d]+)/$',tmitter.mvc.views.index_user, name= "tmitter-mvc-views-index_user"),
     # url(r'^user/(?P<_email>[a-zA-Z\-_\-.\-@\d]+)/$',yonghu.views.index_user_page, name= "shejiao-yonghu-views-index_user"),
-    url(r'^friends/url_list/(?P<_email>[a-zA-Z\-_\-.\-@\d]+)/$',yonghu.views.url_list, name= "shejiao-yonghu-views-url_list"),
+    url(r'^friends/(?P<_email>[a-zA-Z\-_\-.\-@\d]+)/$',yonghu.views.url_list, name= "shejiao-yonghu-views-url_list"),
 
     url(r'^users/$',yonghu.views.users_list,name= "yonghu.views.users_list"),
-    url(r'^signin/$',yonghu.views.signin),
+    url(r'^signin/$',yonghu.views.signin, name="signin"),
     url(r'^signout/$',yonghu.views.signout),
     url(r'^signup/$',yonghu.views.signup),
     url(r'^settings/$',yonghu.views.settings, name ='shejiao-yonghu-views-settings'),

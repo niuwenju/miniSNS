@@ -2,27 +2,10 @@
 {% get_current_language as LANGUAGE_CODE %}
 {% get_available_languages as LANGUAGES %}
 {% get_current_language_bidi as LANGUAGE_BIDI %}
-{#<div id="post-message" class="form">#}
-{#    <form method="post" action="/">                #}
-{#        <table cellpadding="0" cellspacing="0">#}
-{#            <tr>#}
-{#                <td class="word-count"></td>#}
-{#            </tr>#}
-{#        </table>#}
-{#        <div class="input">#}
-{#            <textarea name="message" placeholder="记录你的生活。。。" class="text" rows="4"></textarea>#}
-{#        </div>#}
-{#        <div class="buttons">#}
-{#            <button type="submit" class="submit wide">发布</button>#}
-{#        </div>#}
-{#    </form>#}
-{#</div>#}
 <form action="/search_friends/" method="post">
-        {#                    <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />#}
-        <div class="form-gro marb20">
-            <input class="aa" name="username" type="text" placeholder="查找朋友"/>
-            <input class="bn bn-blue" id="jsLoginBtn" type="submit" value=""/>
-{#            <img src="{% static 'images/logo.jpg' %}" alt="SheJiao" />#}
-        </div>
-{#        <input class="btn btn-blue" id="jsLoginBtn" type="submit" value="立即登录 > "/>#}
-    </form>
+    {#                    <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />#}
+    <div class="form-gro marb20">
+        <input class="aa" name="username" type="text" placeholder="查找朋友"/>
+        <input class="bn bn-blue" id="jsLoginBtn" type="submit" value=""/>
+    </div>
+</form>

@@ -10338,3 +10338,170 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
+
+
+$(function() {
+    //鍏煎IE9涓媝laceholder涓嶆樉绀洪棶棰�
+    function isPlaceholder(){
+        var input = document.createElement('input');
+        return 'placeholder' in input;
+    }
+    if(!isPlaceholder()){
+        $("input").not("input[type='password']").each(
+            function(){
+                if($(this).val()=="" && $(this).attr("placeholder")!=""){
+                    $(this).val($(this).attr("placeholder"));
+                    $(this).focus(function(){
+                        if($(this).val()==$(this).attr("placeholder")) $(this).val("");
+                    });
+                    $(this).blur(function(){
+                        if($(this).val()=="") $(this).val($(this).attr("placeholder"));
+                    });
+                }
+        });
+        $("textarea").each(
+            function(){
+                if($(this).val()=="" && $(this).attr("placeholder")!=""){
+                    $(this).val($(this).attr("placeholder"));
+                    $(this).focus(function(){
+                        if($(this).val()==$(this).attr("placeholder")) $(this).val("");
+                    });
+                    $(this).blur(function(){
+                        if($(this).val()=="") $(this).val($(this).attr("placeholder"));
+                    });
+                }
+        });
+        var pwdField    = $("input[type=password]");
+        var pwdVal      = pwdField.attr('placeholder');
+        pwdField.after('<input id="pwdPlaceholder" type="text" value='+pwdVal+' autocomplete="off" />');
+        var pwdPlaceholder = $('#pwdPlaceholder');
+        pwdPlaceholder.show();
+        pwdField.hide();
+
+        pwdPlaceholder.focus(function(){
+            pwdPlaceholder.hide();
+            pwdField.show();
+            pwdField.focus();
+        });
+
+        pwdField.blur(function(){
+            if(pwdField.val() == '') {
+                pwdPlaceholder.show();
+                pwdField.hide();
+            }
+        });
+    }
+
+    $('.imgslide').unslider({
+        speed: 500,
+        delay: 3000,
+        complete: function() {},
+        keys: true,
+        dots: true,
+        fluid: false
+    });
+    var unslider = $('.imgslide').unslider();
+    $('.unslider-arrow').click(function() {
+        var fn = this.className.split(' ')[1];
+        unslider.data('unslider')[fn]();
+    });
+
+    $('.tab > h2').click(function(){
+        var _self = $(this),
+            index = _self.index();
+        _self.addClass('active').siblings().removeClass('active');
+        $('.tab-form').eq(index).removeClass('hide').siblings('.tab-form').addClass('hide');
+    });
+
+    //input鐨刦ocus鍜宐lur鏁堟灉
+	$('input[type=text]').focus(function(){
+		$(this).parent().removeClass('blur').addClass('focus');
+	});
+	$('input[type=text]').blur(function(){
+		$(this).parent().removeClass('focus').addClass('blur');
+	});
+    //input鐨刦ocus鍜宐lur鏁堟灉
+	$('input[type=password]').focus(function(){
+		$(this).parent().removeClass('blur').addClass('focus');
+	});
+	$('input[type=password]').blur(function(){
+		$(this).parent().removeClass('focus').addClass('blur');
+	});
+
+    //寮瑰嚭妗嗗叧闂寜閽�
+	$('.jsCloseDialog').on('click', function(){
+		$(this).parents('.dialogbox').hide();
+        $('#dialogBg').hide();
+        if($(this).siblings('form')[0]){
+            $(this).siblings('form')[0].reset();
+        }
+	});
+
+
+    //娉ㄥ唽鍒锋柊楠岃瘉鐮佺偣鍑讳簨浠�
+    $('#email_register_form .captcha-refresh').click({'form_id':'email_register_form'},refresh_captcha);
+    $('#email_register_form .captcha').click({'form_id':'email_register_form'},refresh_captcha);
+    $('#mobile_register_form .captcha').click({'form_id':'jsRefreshCode'},refresh_captcha);
+    $('#changeCode').click({'form_id':'jsRefreshCode'},refresh_captcha);
+    $('#jsFindPwdForm .captcha-refresh').click({'form_id':'jsFindPwdForm'},refresh_captcha);
+    $('#jsFindPwdForm .captcha').click({'form_id':'jsFindPwdForm'},refresh_captcha);
+    $('#jsChangePhoneForm .captcha').click({'form_id':'jsChangePhoneForm'},refresh_captcha);
+
+    //鐧诲綍
+    $('#jsLoginBtn').on('click',function(){
+        login_form_submit();
+    })
+    //鐧诲綍琛ㄥ崟閿洏浜嬩欢
+    $("#jsLoginForm").keydown(function(event){
+        if(event.keyCode == 13) {
+            $('#jsLoginBtn').trigger('click');
+        }
+    });
+
+    //閭娉ㄥ唽
+    $('#jsEmailRegBtn').on('click',function(){
+        register_form_submit(this,'emailReg');
+    });
+    $("#email_register_form").keydown(function(event){
+        if(event.keyCode == 13){
+         $('#jsEmailRegBtn').trigger('click');
+        }
+    });
+
+
+    //棣栭〉-蹇樿瀵嗙爜琛ㄥ崟閿洏浜嬩欢
+    $('#jsFindPwdBtn').on('click', function(){
+        find_password_form_submit();
+    });
+    $("#jsFindPwdForm").keydown(function(event){
+        if(event.keyCode == 13){
+               $('#jsFindPwdBtn').trigger('click');
+        }
+    });
+
+    //鍐嶆鍙戦€佹縺娲婚偖浠朵簨浠�
+	$('#jsSenEmailAgin').on('click', function(e){
+        e.preventDefault();
+		$(".zy_success").removeClass("upmove");
+		$(this).parent().hide();
+		$(".sendE2").show().find("span").html("60s");
+        $.ajax({
+            cache:false,
+            type:'get',
+            dataType:'json',
+            url: "/user/send_again_email/",
+            data: {username:zyUname},
+             success: function(data){
+                 zy_str="楠岃瘉閭欢鍙戦€佹垚鍔�";
+                 //console.log(data)
+                 if(data)
+                    zy_Countdown();
+             },
+            error:function(){
+                zy_str="楠岃瘉閭欢鍙戦€佸け璐�";
+            }
+
+         });
+	});
+
+});

@@ -13,6 +13,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/yonghu" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/shejiao" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 2.7.14 virtualenv at ~/Desktop/shejiao/shejiaoenv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

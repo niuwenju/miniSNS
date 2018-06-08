@@ -1,11 +1,18 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import, unicode_literals
+from celery import shared_task
 from email.mime.text import MIMEText
 from email.header import Header
 from smtplib import SMTP_SSL
+import time
 # from shejiao.celery_tasks import app
+
 #qq邮箱smtp服务器
 
 #smtp.login(sender_qq, pwd)
+
+
+@shared_task
 def send_regist_success_mail(userinfo):
     mail_title = u'注册成功'
     mail_content = u'''您好！<br />
@@ -14,6 +21,7 @@ def send_regist_success_mail(userinfo):
     send(mail_title,mail_content,recipient_list)
 #ssl登录
 
+@shared_task
 def send_changeemail_success_mail(userinfo):
     mail_title = u'邮箱修改成功'
     mail_content = u'''您好！<br />

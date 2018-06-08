@@ -3,7 +3,7 @@
 import os
 
 WEB_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ALLOWED_HOSTS = ['10.112.66.167', '127.0.0.1', ]
+ALLOWED_HOSTS = ['10.112.177.228', '127.0.0.1', ]
 DEBUG = True
 
 ADMINS = (
@@ -31,6 +31,17 @@ TIME_ZONE = 'Asia/Shanghai'
 APP_DOMAIN = 'http://127.0.0.1:8004/'
 APP_NAME = 'Shejiao'
 APP_VERSION = '1.0.0'
+
+# import djcelery
+#配置Broker
+# BROKER_URL = 'redis://127.0.0.1:6379/0'
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+# CELERY_BROKER_TRANSPORT = 'redis'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_TIMEZONE = 'Asia/Shanghai'
+# celery flower --broker=redis://guest:guest@localhost:6379/0
 
 # 全局分页的每页条数
 PAGE_SIZE = 4
@@ -146,6 +157,7 @@ INSTALLED_APPS = (
     'xadmin',
     'crispy_forms',
     'pure_pagination',
+    'django_celery_results',
 )
 
 DATABASES = {

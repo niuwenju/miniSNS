@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 from django.http import HttpResponse, Http404, HttpResponseRedirect, HttpResponseServerError
 from django.template import Context, loader
 from django.shortcuts import get_object_or_404,render_to_response
@@ -13,6 +14,7 @@ from shejiao.settings import *
 from yonghu.models import Note, UserProfile, Category
 from yonghu.feed import RSSRecentNotes, RSSUserRecentNotes
 from utils import mailer, formatter, function, uploader, check_code
+from .tasks import send_regist_success_mail, send_changeemail_success_mail
 import io
 from django.shortcuts import render
 import itertools,random
@@ -24,6 +26,10 @@ def __do_login(request, _email, _password):
     _state = __check_login(request, _email, _password)
     if _state['success']:
         # save login info to session
+        _user = UserProfile.objects.get(email=_email)
+        _user.userip = _state['userip']
+        _user.save(False)
+        request.session['userip'] = _state['userip']
         request.session['islogin'] = True
         request.session['userid'] = _state['userid']
         request.session['email'] = _email
@@ -42,7 +48,17 @@ def __e_mail(request):
 
 # return user login status
 def __is_login(request):
-    return request.session.get('islogin', False)
+    # if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+    #     userip = request.META['HTTP_X_FORWARDED_FOR']
+    # else:
+    #     userip = request.META['REMOTE_ADDR']
+    # if userip == request.session.get('userip'):
+    _user = UserProfile.objects.get(email=request.session.get('email'))
+    if _user.userip == request.session.get('userip'):
+        return request.session.get('islogin', False)
+    else:
+        signout(request)
+        return False
 
 
 def __check_login(request, _email, _password):
@@ -50,6 +66,7 @@ def __check_login(request, _email, _password):
         'success': False,
         'message': 'none',
         'userid': -1,
+        'userip': ''
     }
 
     try:
@@ -58,6 +75,10 @@ def __check_login(request, _email, _password):
         if (_user.password == function.md5_encode(_password)):
             _state['success'] = True
             _state['userid'] = _user.id
+            if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+                _state['userip'] = request.META['HTTP_X_FORWARDED_FOR']
+            else:
+                _state['userip'] = request.META['REMOTE_ADDR']
 
         else:
         # password incorrect
@@ -121,11 +142,16 @@ def __do_signup(request, _userinfo):
         _state['message'] = _('验证码有误.')
         return _state
     a = map("".join, list(itertools.product("abcdefghijklmnopqrstuvwxyz", repeat=5)))
+    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+        _userip = request.META['HTTP_X_FORWARDED_FOR']
+    else:
+        _userip = request.META['REMOTE_ADDR']
     _user = UserProfile(
         username=a[random.randint(0, 26 ** 5 - 1)],
         password=_userinfo['password'],
         email=_userinfo['email'],
-        url='url_list/' + _userinfo['email'],
+        url=_userinfo['email'],
+        userip=_userip
         # area = Area.objects.get(id=1)
     )
     # try:
@@ -135,7 +161,8 @@ def __do_signup(request, _userinfo):
     request.session['islogin'] = True
     request.session['userid'] = _user.id
     request.session['email'] = _userinfo['email']
-    mailer.send_regist_success_mail(_userinfo)
+    request.session['userip'] = _userip
+    send_regist_success_mail.delay(_userinfo)
 
     return _state
 
@@ -354,7 +381,7 @@ def detail_delete(request, _id):
 # signin view
 def signin(request):
     # get user login status
-    _islogin = __is_login(request)
+    _islogin = False
 
     try:
         # get post params
@@ -388,7 +415,7 @@ def signin(request):
 
 def signup(request):
     # check is login
-    _islogin = __is_login(request)
+    _islogin = False
 
     if (_islogin):
         return HttpResponseRedirect('/')
@@ -509,7 +536,7 @@ def settings(request):
                 return __result_message(request, _('头像上传失败'), _upload_state['message'])
 
         _user.save(False)
-        mailer.send_changeemail_success_mail(_userinfo)
+        send_changeemail_success_mail.delay(_userinfo)
         _state['message'] = _('修改成功.')
         # except:
         # return __result_message(request,u'错误','提交数据时出现异常，保存失败。')
