@@ -5,9 +5,37 @@
 {% get_current_language_bidi as LANGUAGE_BIDI %}
 {% load user_tags %}
 {% block title %}{{ page_title }}{% endblock %}
+{#{% block scripts %}#}
+{#    <script>#}
+{#        /*#}
+{#         自强学堂 学习更多IT技术#}
+{#         http://www.ziqiangxuetang.com#}
+{#         */#}
+{##}
+{#        $.ajaxSetup({#}
+{#            data: {csrfmiddlewaretoken: '{{ csrf_token }}'},#}
+{#        });#}
+{##}
+{#        function select_drug() {#}
+{#            var drug = document.forms[0].drug;#}
+{#            var drugs = "";#}
+{#            var i;#}
+{#            for (i = 0; i < drug.length; i++) {#}
+{#                if (drug[i].checked) {#}
+{#                    drugs = drugs + drug[i].value + " ";#}
+{#                }#}
+{#            }#}
+{##}
+{#            $.post('{% url "exam2014" %}', {'drugs': drugs}, function (ret) {#}
+{#                $('#result').html(ret);#}
+{#            })#}
+{#        }#}
+{#    </script>#}
+{#{% endblock %}#}
 {% block main %}
     <div class="form">
         <form action="{% url 'shejiao-yonghu-views-settings' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
             <table cellpadding="0" cellspacing="0">
                 <div class="fl form-box">
                     <h2>修改个人信息</h2>
@@ -24,8 +52,8 @@
                     </div>
                     <div class="form-group marb20">
                         <label>姓&nbsp;&nbsp;&nbsp;别</label>
-                        <select name="sex" ,id="sex1">
-                            {% ifequal 'm' user.sex %}
+                        <select name="gender" ,id="sex1">
+                            {% ifequal 'm' user.gender %}
                             <option value="m">男</option>
                             <option value="f">女</option>
                             {% else %}

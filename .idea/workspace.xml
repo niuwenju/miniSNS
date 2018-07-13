@@ -2,21 +2,406 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b02f143-ffb9-422c-9dc8-b4af31944f93" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shejiao/celery_tasks.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yonghu/migrations/0008_userprofile_userip.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yonghu/tasks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shejiao.iml" afterPath="$PROJECT_DIR$/.idea/shejiao.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/showevents.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yonghu/migrations/0009_auto_20180707_1442.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yonghu/migrations/0010_auto_20180707_1527.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yonghu/migrations/0011_auto_20180709_1353.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yonghu/migrations/0012_auto_20180713_1458.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/include/search.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/.tx/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/adminx.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/apps.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/filters.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/forms.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/layout.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/django.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/django.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/migrations/0002_log.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/migrations/0003_auto_20160715_0100.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/actions.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/aggregation.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/ajax.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/auth.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/batch.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/bookmark.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/chart.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/comments.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/details.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/editable.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/export.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/filters.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/images.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/importexport.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/inline.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/language.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/layout.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/mobile.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/multiselect.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/passwords.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/portal.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/quickfilter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/quickform.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/refresh.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/relate.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/relfield.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/sitemenu.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/sortablelist.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/themes.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/topnav.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/wizard.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/plugins/xversion.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/sites.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-xadmin.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.form.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.mobile.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.page.dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.aggregation.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.formset.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.importexport.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.quickfilter.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugins.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.widget.editable.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.widget.select-transfer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.dashboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.list.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.batch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.bookmark.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.charts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.details.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.editable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.filters.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.formset.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.importexport.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.portal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.quick-form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.quickfilter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.refresh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.revision.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.sortablelist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.themes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.responsive.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.datetime.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.multiselect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.select-transfer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.select.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/autotype/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.is.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs-latin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-TW.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/css/bootstrap-modal.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/img/ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modalmanager.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/excanvas.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.colorhelpers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.aggregate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.canvas.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.categories.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.crosshair.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.errorbars.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.fillbetween.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.image.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.navigate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.pie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.resize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.selection.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.stack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.symbol.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.threshold.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.time.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/load-image/load-image.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/load-image/load-image.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2-spinner.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_eu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_pt-BR.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_pt-PT.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ua.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_zh-CN.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_zh-hans.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2x2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap3.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.default.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.legacy.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/500.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/complete.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/confirm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/done.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/email.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/user/add_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/user/change_password.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/base_site.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.setlang.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.theme.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.topnav.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/modal_list.left_navbar.quickfilter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_form.before_fieldsets.wizard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_form.search_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_menu.filters.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_bottom.actions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_top.charts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_top.date_hierarchy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.export.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.import.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.layouts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.refresh.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.saveorder.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/accordion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/blank.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/one.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/stacked.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/tab.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/tabular.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/char.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/checklist.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/date.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/fk_search.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/number.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/quickfilter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/rel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/forms/transfer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/grids/thumbnails.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/import_export/export_action.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/import_export/import.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/box.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/pagination.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/sitemenu_accordion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/sitemenu_default.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/submit_line.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/toggle_back.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/toggle_menu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/field_value.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/field_value_td.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/fieldset.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/input_group.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/td-field.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/app_index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/batch_change_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/invalid_setup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/logged_out.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_delete_confirm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_delete_selected_confirm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_history.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/quick_detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/quick_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/recover_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/recover_list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/revision_diff.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/revision_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/addform.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/chart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/qbutton.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templatetags/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/templatetags/xadmin_tags.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/util.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/vendors.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/views/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/views/base.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/views/dashboard.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/views/delete.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/views/detail.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/views/edit.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/views/form.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/views/list.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/views/website.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xadmin/widgets.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/yonghu/adminx.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shejiao/__init__.py" afterPath="$PROJECT_DIR$/shejiao/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shejiao/settings.py" afterPath="$PROJECT_DIR$/shejiao/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shejiao/urls.py" afterPath="$PROJECT_DIR$/shejiao/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/styles/default.css" afterPath="$PROJECT_DIR$/statics/styles/default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/styles/jq.js" afterPath="$PROJECT_DIR$/statics/styles/jq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/edit.html" afterPath="$PROJECT_DIR$/templates/edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/list_item.html" afterPath="$PROJECT_DIR$/templates/include/list_item.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/postform.html" afterPath="$PROJECT_DIR$/templates/include/postform.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/include/search.html" afterPath="$PROJECT_DIR$/templates/include/search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/settings.html" afterPath="$PROJECT_DIR$/templates/settings.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/signin.html" afterPath="$PROJECT_DIR$/templates/signin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/mailer.py" afterPath="$PROJECT_DIR$/utils/mailer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/signup.html" afterPath="$PROJECT_DIR$/templates/signup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/users_list.html" afterPath="$PROJECT_DIR$/templates/users_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yonghu/apps.py" afterPath="$PROJECT_DIR$/yonghu/apps.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yonghu/models.py" afterPath="$PROJECT_DIR$/yonghu/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yonghu/tasks.py" afterPath="$PROJECT_DIR$/yonghu/tasks.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yonghu/views.py" afterPath="$PROJECT_DIR$/yonghu/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,11 +431,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shejiao/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yonghu/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="447" column="24" lean-forward="true" selection-start-line="447" selection-start-column="24" selection-end-line="447" selection-end-column="24" />
+            <state relative-caret-position="-2203">
+              <caret line="65" column="4" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
               <folding>
                 <element signature="e#25#117#0" expanded="true" />
               </folding>
@@ -58,57 +453,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mailer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/mailer.py">
+      <file leaf-file-name="showevents.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/showevents.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="e#24#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yonghu/tasks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="12" />
-              <folding>
-                <element signature="e#24#80#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shejiao/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="31" />
+            <state relative-caret-position="273">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="celery_tasks.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shejiao/celery_tasks.py">
+      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding>
-                <element signature="e#24#80#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shejiao/urls.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yonghu/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="53" column="58" lean-forward="false" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+            <state relative-caret-position="-1281">
+              <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/settings.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="61" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -117,18 +506,28 @@
       <file leaf-file-name="users_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/users_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="105">
+              <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userinfo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/include/userinfo.html">
+      <file leaf-file-name="showinfo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/showinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+            <state relative-caret-position="0">
+              <caret line="0" column="56" lean-forward="true" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eventinfo.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/eventinfo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -140,43 +539,43 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tmitter_mvc</find>
-      <find>friends</find>
-      <find>user.</find>
-      <find>users.</find>
-      <find>Paginator</find>
-      <find>changee</find>
-      <find>login</find>
-      <find>realname</find>
-      <find>textarea</find>
-      <find>do_lo</find>
-      <find>signout</find>
-      <find>url</find>
-      <find>.save</find>
-      <find>changepa</find>
-      <find>friends.</find>
-      <find>sea</find>
-      <find>search</find>
-      <find>submit wide</find>
-      <find>btn-blue</find>
-      <find>input</find>
-      <find>sear</find>
-      <find>click</find>
-      <find>index</find>
+      <find>uplo</find>
+      <find>ajaxSetup</find>
+      <find>temp</find>
+      <find>cs</find>
+      <find>login_form</find>
+      <find>root_</find>
+      <find>AUTHENTICATION_BACKENDS</find>
+      <find>form-p</find>
+      <find>AUTH_USER_MODEL¶</find>
+      <find>STATIC_</find>
+      <find>__result_message</find>
+      <find>'</find>
+      <find>''</find>
+      <find>email=_</find>
       <find>setting</find>
-      <find>signin</find>
-      <find>SIGNUP</find>
+      <find>signout</find>
       <find>set</find>
-      <find>change</find>
-      <find>send</find>
+      <find>index</find>
+      <find>search</find>
+      <find>cache</find>
+      <find>ADMIN_PAGE_SIZE</find>
       <find>signup</find>
+      <find>list</find>
+      <find>last</find>
+      <find>users_list</find>
+      <find>query</find>
+      <find>NEW</find>
+      <find>NEWs</find>
+      <find>__user_id</find>
+      <find>signin</find>
     </findStrings>
     <replaceStrings>
       <replace>#C4E1FF</replace>
@@ -186,7 +585,11 @@
       <replace>friends.</replace>
       <replace>shejiao-yonghu</replace>
       <replace>users.</replace>
+      <replace>id=__user_id</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/shejiaoenv/lib/python2.7/site-packages/social_core</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -194,54 +597,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/yonghu/tests.py" />
-        <option value="$PROJECT_DIR$/mvc/views.py" />
-        <option value="$PROJECT_DIR$/mvc/__init__.py" />
-        <option value="$PROJECT_DIR$/yonghu/templatetags/common_tags.py" />
-        <option value="$PROJECT_DIR$/yonghu/templatetags/user_tags.py" />
-        <option value="$PROJECT_DIR$/yonghu/feed.py" />
-        <option value="$PROJECT_DIR$/yonghu/adminx.py" />
-        <option value="$PROJECT_DIR$/yonghu/apps.py" />
-        <option value="$PROJECT_DIR$/templates/control/userslist_pagebar.html" />
-        <option value="$PROJECT_DIR$/templates/feed/title.html" />
-        <option value="$PROJECT_DIR$/templates/detail.html" />
         <option value="$PROJECT_DIR$/templates/include/friends_list.html" />
         <option value="$PROJECT_DIR$/templates/friends_list.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/changepassword.html" />
         <option value="$PROJECT_DIR$/templates/changeemail.html" />
-        <option value="$PROJECT_DIR$/templates/edit.html" />
-        <option value="$PROJECT_DIR$/templates/include/list_item.html" />
         <option value="$PROJECT_DIR$/yonghu/forms.py" />
         <option value="$PROJECT_DIR$/utils/function.py" />
         <option value="$PROJECT_DIR$/utils/formatter.py" />
-        <option value="$PROJECT_DIR$/templates/signup.html" />
-        <option value="$PROJECT_DIR$/templates/settings.html" />
         <option value="$PROJECT_DIR$/yonghu/forgetpwd.html" />
         <option value="$PROJECT_DIR$/templates/forgetpwd.html" />
         <option value="$PROJECT_DIR$/templates/result_message.html" />
         <option value="$PROJECT_DIR$/templates/friend_list.html" />
         <option value="$PROJECT_DIR$/templates/include/userinfo_search.html" />
-        <option value="$PROJECT_DIR$/templates/users_list.html" />
         <option value="$PROJECT_DIR$/statics/styles/jq.js" />
         <option value="$PROJECT_DIR$/statics/admin/css/base.css" />
-        <option value="$PROJECT_DIR$/templates/include/postform.html" />
         <option value="$PROJECT_DIR$/templates/url.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/include/search.html" />
-        <option value="$PROJECT_DIR$/templates/signin.html" />
-        <option value="$PROJECT_DIR$/statics/styles/default.css" />
-        <option value="$PROJECT_DIR$/yonghu/models.py" />
-        <option value="$PROJECT_DIR$/shejiao/urls.py" />
         <option value="$PROJECT_DIR$/templates/include/userinfo.html" />
         <option value="$PROJECT_DIR$/shejiao/celery.py" />
         <option value="$PROJECT_DIR$/shejiao/__init__.py" />
         <option value="$PROJECT_DIR$/shejiao/celery_tasks.py" />
         <option value="$PROJECT_DIR$/yonghu/test.py" />
-        <option value="$PROJECT_DIR$/yonghu/tasks.py" />
         <option value="$PROJECT_DIR$/utils/mailer.py" />
+        <option value="$PROJECT_DIR$/templates/include/search.html" />
+        <option value="$PROJECT_DIR$/yonghu/tasks.py" />
+        <option value="$PROJECT_DIR$/statics/styles/default.css" />
+        <option value="$PROJECT_DIR$/social_core/tests/actions/actions.py" />
+        <option value="$PROJECT_DIR$/social_core/actions.py" />
+        <option value="$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py" />
+        <option value="$PROJECT_DIR$/yonghu/adminx.py" />
+        <option value="$PROJECT_DIR$/yonghu/admin.py" />
+        <option value="$PROJECT_DIR$/yonghu/apps.py" />
+        <option value="$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/django/contrib/auth/models.py" />
+        <option value="$PROJECT_DIR$/templates/settings.html" />
+        <option value="$PROJECT_DIR$/templates/signup.html" />
+        <option value="$PROJECT_DIR$/templates/signin.html" />
+        <option value="$PROJECT_DIR$/templates/include/postform.html" />
+        <option value="$PROJECT_DIR$/templates/include/list_item.html" />
+        <option value="$PROJECT_DIR$/templates/search/indexes/search_demo/userprofile_text.txt" />
+        <option value="$PROJECT_DIR$/yonghu/search_indexes.py" />
         <option value="$PROJECT_DIR$/shejiao/settings.py" />
+        <option value="$PROJECT_DIR$/templates/search/search.html" />
+        <option value="$PROJECT_DIR$/templates/users_list.html" />
+        <option value="$PROJECT_DIR$/templates/search/userinfo.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/yonghu/models.py" />
+        <option value="$PROJECT_DIR$/templates/add.html" />
+        <option value="$PROJECT_DIR$/templates/edit.html" />
+        <option value="$PROJECT_DIR$/shejiao/urls.py" />
+        <option value="$PROJECT_DIR$/templates/show.html" />
         <option value="$PROJECT_DIR$/yonghu/views.py" />
+        <option value="$PROJECT_DIR$/templates/showevents.html" />
       </list>
     </option>
   </component>
@@ -252,10 +658,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2" />
-    <option name="y" value="111" />
-    <option name="width" value="1900" />
-    <option name="height" value="876" />
+    <option name="x" value="525" />
+    <option name="y" value="25" />
+    <option name="width" value="1395" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -274,6 +680,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -338,42 +745,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shejiao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shejiao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="feed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shejiao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shejiao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="statics" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -412,7 +783,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -423,10 +793,11 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
@@ -818,7 +1189,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="111" width="1900" height="876" extended-state="0" />
+    <frame x="525" y="25" width="1395" height="1055" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -827,11 +1198,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30526316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="manage.py@shejiao" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3561431" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23297492" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="manage.py@shejiao" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40608606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33462533" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4795383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -849,18 +1220,18 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5116641" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43281654" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30526316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19554754" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="manage.py@shejiao" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3561431" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@shejiao" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40685713" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33462533" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
@@ -873,32 +1244,69 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="56" />
+      <breakpoints>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/shejiaoenv/lib/python2.7/site-packages/social_django/views.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/yonghu/views.py</url>
+          <line>311</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="104" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/edit.html">
+    <entry file="file:///usr/lib/python2.7/importlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        <state relative-caret-position="272">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yonghu/forms.py">
+    <entry file="file://$PROJECT_DIR$/social_core/tests/actions/actions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="150" column="49" lean-forward="false" selection-start-line="150" selection-start-column="49" selection-end-line="150" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yonghu/feed.py">
+    <entry file="file://$PROJECT_DIR$/social_core/tests/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        <state relative-caret-position="-4400">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1380">
+          <caret line="347" column="6" lean-forward="false" selection-start-line="347" selection-start-column="6" selection-end-line="347" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/django/contrib/auth/base_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-294">
+          <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/social_django/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yonghu/adminx.py" />
     <entry file="file://$PROJECT_DIR$/yonghu/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -906,101 +1314,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yonghu/adminx.py">
+    <entry file="file://$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/django/contrib/staticfiles/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/gettext.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10038">
+          <caret line="479" column="0" lean-forward="false" selection-start-line="479" selection-start-column="0" selection-end-line="479" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="304" column="10" lean-forward="false" selection-start-line="304" selection-start-column="10" selection-end-line="304" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social_core/pipeline/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social_core/pipeline/social_auth.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yonghu/admin.py">
+    <entry file="file:///usr/lib/python2.7/md5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/feed/description.html">
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-67365439/_md5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/changepassword.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/admin/js/SelectBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2348">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/admin/js/actions.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/admin/js/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5040">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/admin/js/jquery.init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/admin/js/prepopulate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/admin/js/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="110" column="76" lean-forward="false" selection-start-line="110" selection-start-column="71" selection-end-line="110" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/admin/css/forms.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/admin/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="362" column="14" lean-forward="true" selection-start-line="362" selection-start-column="14" selection-end-line="362" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/admin/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-992">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/result_message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="173">
+          <caret line="71" column="8" lean-forward="false" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1008,200 +1367,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shejiao/wsgi.py">
+    <entry file="file://$PROJECT_DIR$/yonghu/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-67365439/_md5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="71" column="8" lean-forward="false" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/dist-packages/Crypto/Hash/hashalgo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        <state relative-caret-position="21">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="10" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/styles/jq.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3759">
-          <caret line="4654" column="31" lean-forward="false" selection-start-line="4654" selection-start-column="26" selection-end-line="4654" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="14" column="74" lean-forward="false" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/include/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/signin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/include/postform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/include/list_item.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/friend_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="12" column="50" lean-forward="false" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/statics/styles/default.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1736">
-          <caret line="561" column="14" lean-forward="false" selection-start-line="561" selection-start-column="14" selection-end-line="561" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yonghu/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yonghu/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="58" column="51" lean-forward="false" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
-          <folding>
-            <element signature="e#24#63#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/include/userinfo_search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-103">
-          <caret line="33" column="41" lean-forward="false" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/url.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shejiao/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="53" column="58" lean-forward="false" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+        <state relative-caret-position="212">
+          <caret line="90" column="1" lean-forward="false" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users_list.html">
+    <entry file="file://$PROJECT_DIR$/templates/include/postform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/include/list_item.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/include/userinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/celery/__init__.py">
+    <entry file="file://$PROJECT_DIR$/templates/include/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1702">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/celery/app/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2056">
-          <caret line="142" column="6" lean-forward="false" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/django/core/handlers/base.py">
+    <entry file="file://$PROJECT_DIR$/templates/search/indexes/search_demo/userprofile_text.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1413">
-          <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shejiao/__init__.py">
+    <entry file="file://$PROJECT_DIR$/yonghu/search_indexes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="42">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
           <folding>
-            <element signature="e#0#56#0" expanded="false" />
+            <element signature="e#24#52#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1210,55 +1449,209 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding>
-            <element signature="e#24#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yonghu/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/mailer.py">
+    <entry file="file://$PROJECT_DIR$/templates/search/indexes/yonghu/userprofile_text.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#60#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yonghu/tasks.py">
+    <entry file="file://$PROJECT_DIR$/templates/signup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="12" />
-          <folding>
-            <element signature="e#24#80#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-273">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shejiaoenv/lib/python2.7/site-packages/social_django/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/signin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/haystack/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3684">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shejiaoenv/local/lib/python2.7/site-packages/haystack/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/friend_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/include/userinfo_search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search/userinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="52" column="34" lean-forward="false" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shejiao/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="31" />
+        <state relative-caret-position="231">
+          <caret line="137" column="32" lean-forward="false" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="61" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shejiao/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/showinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="56" lean-forward="true" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yonghu/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="447" column="24" lean-forward="true" selection-start-line="447" selection-start-column="24" selection-end-line="447" selection-end-column="24" />
+        <state relative-caret-position="-2203">
+          <caret line="65" column="4" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
           <folding>
             <element signature="e#25#117#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yonghu/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1281">
+          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/showevents.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eventinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

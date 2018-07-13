@@ -4,6 +4,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect, HttpRespons
 from django.template import Context, loader
 from django.shortcuts import get_object_or_404,render_to_response
 from django.core.paginator import Paginator
+from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 from django.utils.translation import ugettext as _
 from django.db.models import Q
@@ -11,13 +12,13 @@ from django.db.models import Q
 
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from shejiao.settings import *
-from yonghu.models import Note, UserProfile, Category
+from yonghu.models import Note, UserProfile, Category, Event
 from yonghu.feed import RSSRecentNotes, RSSUserRecentNotes
 from utils import mailer, formatter, function, uploader, check_code
 from .tasks import send_regist_success_mail, send_changeemail_success_mail
 import io
 from django.shortcuts import render
-import itertools,random
+import itertools
 import cStringIO, string, os, random
 from PIL import Image, ImageDraw, ImageFont
 
@@ -26,9 +27,6 @@ def __do_login(request, _email, _password):
     _state = __check_login(request, _email, _password)
     if _state['success']:
         # save login info to session
-        _user = UserProfile.objects.get(email=_email)
-        _user.userip = _state['userip']
-        _user.save(False)
         request.session['userip'] = _state['userip']
         request.session['islogin'] = True
         request.session['userid'] = _state['userid']
@@ -42,23 +40,27 @@ def __user_id(request):
 
 
 # get sessio realname
-def __e_mail(request):
-    return request.session.get('email', '')
+def __id(request):
+    return request.session.get('id', '')
 
 
 # return user login status
 def __is_login(request):
-    # if request.META.has_key('HTTP_X_FORWARDED_FOR'):
-    #     userip = request.META['HTTP_X_FORWARDED_FOR']
-    # else:
-    #     userip = request.META['REMOTE_ADDR']
-    # if userip == request.session.get('userip'):
-    _user = UserProfile.objects.get(email=request.session.get('email'))
-    if _user.userip == request.session.get('userip'):
-        return request.session.get('islogin', False)
-    else:
-        signout(request)
-        return False
+    return request.session.get('islogin', False)
+
+
+# def __is_ip(request):
+#     # if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+#     #     userip = request.META['HTTP_X_FORWARDED_FOR']
+#     # else:
+#     #     userip = request.META['REMOTE_ADDR']
+#     # if userip == request.session.get('userip'):
+#     _user = UserProfile.objects.get(id=request.session.get('userid'))
+#     if _user.userip == request.session.get('userip'):
+#         pass
+#     else:
+#         signout(request)
+#         return
 
 
 def __check_login(request, _email, _password):
@@ -75,19 +77,18 @@ def __check_login(request, _email, _password):
         if (_user.password == function.md5_encode(_password)):
             _state['success'] = True
             _state['userid'] = _user.id
-            if request.META.has_key('HTTP_X_FORWARDED_FOR'):
-                _state['userip'] = request.META['HTTP_X_FORWARDED_FOR']
-            else:
-                _state['userip'] = request.META['REMOTE_ADDR']
-
+            # if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+            #     _state['userip'] = request.META['HTTP_X_FORWARDED_FOR']
+            # else:
+            #     _state['userip'] = request.META['REMOTE_ADDR']
         else:
         # password incorrect
             _state['success'] = False
-            _state['message'] = _('密码错误！')
+            _state['message'] = _(u'密码错误！')
 
     except (UserProfile.DoesNotExist):  # user not exist
         _state['success'] = False
-        _state['message'] = _('用户不存在！')
+        _state['message'] = _(u'用户不存在！')
 
     return _state
 
@@ -116,30 +117,30 @@ def __do_signup(request, _userinfo):
     # check username exist
     if (_userinfo['email'] == ''):
         _state['success'] = False
-        _state['message'] = _('请输入邮箱.')
+        _state['message'] = _(u'请输入邮箱.')
         return _state
 
     if (_userinfo['password'] == ''):
         _state['success'] = False
-        _state['message'] = _('请输入密码.')
+        _state['message'] = _(u'请输入密码.')
         return _state
 
     # check username exist
     if (__check_email_exist(_userinfo['email'])):
         _state['success'] = False
-        _state['message'] = _('用户已存在.')
+        _state['message'] = _(u'用户已存在.')
         return _state
 
         # check password & confirm password
     if (_userinfo['password'] != _userinfo['confirm']):
         _state['success'] = False
-        _state['message'] = _('密码确认有误.')
+        _state['message'] = _(u'密码确认有误.')
         return _state
 
     session_check_code = request.session['check_code']
     if _userinfo['post_check_code'].lower() != session_check_code.lower():
         _state['success'] = False
-        _state['message'] = _('验证码有误.')
+        _state['message'] = _(u'验证码有误.')
         return _state
     a = map("".join, list(itertools.product("abcdefghijklmnopqrstuvwxyz", repeat=5)))
     if request.META.has_key('HTTP_X_FORWARDED_FOR'):
@@ -148,7 +149,7 @@ def __do_signup(request, _userinfo):
         _userip = request.META['REMOTE_ADDR']
     _user = UserProfile(
         username=a[random.randint(0, 26 ** 5 - 1)],
-        password=_userinfo['password'],
+        password=function.md5_encode(_userinfo['password']),
         email=_userinfo['email'],
         url=_userinfo['email'],
         userip=_userip
@@ -168,7 +169,7 @@ def __do_signup(request, _userinfo):
 
 
 # response result message page
-def __result_message(request, _title=_('提示消息'), _message=_('Unknow error,processing interrupted.'), _go_back_url=''):
+def __result_message(request, _title=_(u'提示消息'), _message=_('Unknow error,processing interrupted.'), _go_back_url=''):
     _islogin = __is_login(request)
 
     if _go_back_url == '':
@@ -192,88 +193,91 @@ def __result_message(request, _title=_('提示消息'), _message=_('Unknow error
 # user messages view and page
 def url_list(request,_email):
     _islogin = __is_login(request)
-    _page_title = _('盟友信息')
+    _page_title = _(u'盟友信息')
     _user = UserProfile.objects.get(email=_email)
     return render(request, "url.html",{'user':_user,'page_title':_page_title,'islogin': _islogin,})
 
-
-def search_friends(request):
+@csrf_exempt
+def friends(request):
     _islogin = __is_login(request)
-    _page_title = _('搜索用户')
-    try:
-        # get post params
-        _search = request.POST['search']
-        _is_post = True
-    except (KeyError):
-        _is_post = False
-
-    if _is_post:
-        # check login
-        if not _islogin:
-            return HttpResponseRedirect('/signin/')
-
-        try:
-            _user = UserProfile.objects.filter(username__icontains=_search)
-        except:
-            return HttpResponseRedirect('/signin/')
-
-        try:
-         page = request.GET.get('page', 1)
-        except PageNotAnInteger:
-            page = 1
-
-        p = Paginator(_user, 2, request=request)
-        users = p.page(page)
-        _template = loader.get_template('friend_list.html')
-
-        _context = {
-            'page_title': _page_title,
-            'islogin': _islogin,
-            'userid': __user_id(request),
-            'users': users,
-        }
-
-        _output = _template.render(_context)
-
-        return HttpResponse(_output)
+    _page_title = _(u'盟友圈')
+    if _islogin:
+        # get friend messages if user is logined
+        _login_user = UserProfile.objects.get(id=__user_id(request))
+        _friends = _login_user.friend.all()
     else:
-        _page_title = _('盟友圈')
+        return HttpResponseRedirect('/signin/')
 
-        _login_user = None
+    try:
+        page = request.GET.get('page', 1)
+    except PageNotAnInteger:
+        page = 1
 
-        if _islogin:
-            # get friend messages if user is logined
-            _login_user = UserProfile.objects.get(email=__e_mail(request))
-            _friends = _login_user.friend.all()
-        else:
-            _login_user = None
+    p = Paginator(_friends, 2, request=request)
+    friends = p.page(page)
+    _context = {
+        'page_title': _page_title,
+        'islogin': _islogin,
+        'userid': __user_id(request),
+        'friends': friends,
+    }
+    return render(request,'users_list.html', _context)
 
+
+def news(request):
+    news = []
+    for j in range(5):
+        cur_events = []
+        id = []
+        for i in range(2):
+            cur = random.randint(1, 4)
+            id.append(str(cur))
+            cur_event = Event.objects.get(id=cur)
+            cur_events.append(cur_event.e_name.strip())
+        news.append({'name': ' '.join(cur_events), 'ids': '@'.join(id)})
+    content = {
+        'events': news,
+        'islogin': __is_login(request)
+    }
+    # key = str(i)
+    # content[key] = {'name':' '.join(events),'ids':'@'.join(id)}
+    return render(request, 'show.html', content)
+
+def add(request,ids):
+    _user = UserProfile.objects.get(id=__user_id(request))
+    id = ids.split('@')
+    for i in id:
         try:
-            page = request.GET.get('page', 1)
-        except PageNotAnInteger:
-            page = 1
+            _user.associate.add(i)
+        except:
+            pass
+    event = []
+    for curid in id:
+        cur_event = Event.objects.get(id=curid)
+        event.append(cur_event.e_name)
+    content = {
+        'events':','.join(event),
+        'islogin': __is_login(request)
+    }
+    return render(request,'add.html',content)
 
-        p = Paginator(_friends, 2, request=request)
-        friends = p.page(page)
-        _template = loader.get_template('users_list.html')
 
-        _context = {
-            'page_title': _page_title,
-            'islogin': _islogin,
-            'userid': __user_id(request),
-            'friends': friends,
-        }
-
-        _output = _template.render(_context)
-
-        return HttpResponse(_output)
-# def index_user(reqeest)
-
+def showevent(request):
+    _islogin = __is_login(request)
+    _page_title = _(u'参与事件')
+    user = UserProfile.objects.get(id=__user_id(request))
+    # events = user.associate.all
+    content = {
+        'islogin':_islogin,
+        'page_title':_page_title,
+        'user':user
+    }
+    return render(request,'showevents.html',content)
 
 def index(request):
     # get user login status
     _islogin = __is_login(request)
-    _page_title = _('主页')
+    _page_title = _(u'主页')
 
     try:
         # get post params
@@ -305,7 +309,7 @@ def index(request):
 
     if _islogin:
         # get friend messages if user is logined
-        _login_user = UserProfile.objects.get(email=__e_mail(request))
+        _login_user = UserProfile.objects.get(id =__user_id(request))
     else:
         _login_user = None
     if _login_user:
@@ -324,9 +328,9 @@ def index(request):
 
     p = Paginator(_notes, 2, request=request)
     no_te = p.page(page)
-    _template = loader.get_template('index.html')
+    # _template = loader.get_template('index.html')
 
-    _context = {
+    context = {
         'page_title': _page_title,
         'notes': no_te,
         'islogin': _islogin,
@@ -334,9 +338,9 @@ def index(request):
         # 'self_home': _self_home,
     }
 
-    _output = _template.render(_context)
+    # _output = _template.render(_context)
 
-    return HttpResponse(_output)
+    return render(request,'index.html',context)
 
 
 # detail view
@@ -379,9 +383,10 @@ def detail_delete(request, _id):
 
 
 # signin view
+@csrf_exempt
 def signin(request):
     # get user login status
-    _islogin = False
+    _islogin = __is_login(request)
 
     try:
         # get post params
@@ -406,7 +411,7 @@ def signin(request):
     else:
         _template = loader.get_template('signin.html')
         _context = {
-            'page_title': _('登录'),
+            'page_title': _(u'登录'),
             'state': _state
         }
         _output = _template.render(_context)
@@ -470,22 +475,25 @@ def signup(request):
     }
 
     # body content
-    _template = loader.get_template('signup.html')
+    # _template = loader.get_template('signup.html')
     _context = {
-        'page_title': _('注册'),
+        'page_title': _(u'注册'),
         'state': _result,
     }
-    _output = _template.render(_context)
-    return HttpResponse(_output)
+    # _output = _template.render(_context)
+    return render(request,'signup.html',_context)
 
 
 # signout view
 def signout(request):
+    _user = UserProfile.objects.get(id=request.session.get('userid'))
+    _user.userip = ''
+    _user.save(False)
     request.session['islogin'] = False
     request.session['userid'] = -1
     request.session['username'] = ''
 
-    return HttpResponseRedirect('/')
+    return HttpResponseRedirect('/signin')
 
 
 def settings(request):
@@ -506,7 +514,7 @@ def settings(request):
         _userinfo = {
             'face': request.FILES.get('face', None),
             'username': request.POST['username'],
-            'sex': request.POST['sex'],
+            'gender': request.POST['gender'],
             'email': request.POST['email'],
             "about": request.POST['about'],
             "phone": request.POST['phone'],
@@ -522,7 +530,7 @@ def settings(request):
     # save user info
     if _is_post:
         _user.username = _userinfo['username']
-        _user.sex = _userinfo['sex']
+        _user.gender = _userinfo['gender']
         _user.email = _userinfo['email']
         _user.about = _userinfo['about']
         _user.phone = _userinfo['phone']
@@ -533,24 +541,23 @@ def settings(request):
             if _upload_state['success']:
                 _user.face = _upload_state['message']
             else:
-                return __result_message(request, _('头像上传失败'), _upload_state['message'])
+                return __result_message(request, _(u'头像上传失败'), _upload_state['message'])
 
         _user.save(False)
-        send_changeemail_success_mail.delay(_userinfo)
-        _state['message'] = _('修改成功.')
+        send_changeemail_success_mail.delay(_userinfo['email'])
+        _state['message'] = _(u'修改成功.')
         # except:
         # return __result_message(request,u'错误','提交数据时出现异常，保存失败。')
 
     # body content
-    _template = loader.get_template('settings.html')
+    # _template = loader.get_template('settings.html')
     _context = {
-        'page_title': _('修改个人信息'),
+        'page_title': _(u'修改个人信息'),
         'state': _state,
         'islogin': _islogin,
         'user': _user,
     }
-    _output = _template.render(_context)
-    return HttpResponse(_output)
+    return render(request, 'settings.html',_context)
 
 
 def __do_changepassword(request, _userinfo):
@@ -562,13 +569,13 @@ def __do_changepassword(request, _userinfo):
 
     if (_userinfo['newpassword'] == ''):
         _state['success'] = False
-        _state['message'] = _('请输入密码.')
+        _state['message'] = _(u'请输入密码.')
         return _state
 
         # check password & confirm password
     if (_userinfo['newpassword'] != _userinfo['confirm']):
         _state['success'] = False
-        _state['message'] = _('密码确认有误.')
+        _state['message'] = _(u'密码确认有误.')
         return _state
 
     _user = UserProfile.objects.get(username=request.session['username'])
@@ -589,18 +596,18 @@ def __do_forgetpwd(request, _userinfo):
 
     if (_userinfo['email'] == ''):
         _state['success'] = False
-        _state['message'] = _('请输入邮箱.')
+        _state['message'] = _(u'请输入邮箱.')
         return _state
 
     if (_userinfo['newpassword'] == ''):
         _state['success'] = False
-        _state['message'] = _('请输入密码.')
+        _state['message'] = _(u'请输入密码.')
         return _state
 
         # check password & confirm password
     if (_userinfo['newpassword'] != _userinfo['confirm']):
         _state['success'] = False
-        _state['message'] = _('密码确认有误.')
+        _state['message'] = _(u'密码确认有误.')
         return _state
 
     _user = UserProfile.objects.get(email=request.session['email'])
@@ -641,7 +648,7 @@ def forgetpwd(request):
     if _is_post:
         _state = __do_forgetpwd(request, _userinfo)
         if _state['success']:
-            return __result_message(request, _('修改密码'), _('密码修改成功！'))
+            return __result_message(request, _(u'修改密码'), _(u'密码修改成功！'))
     else:
         _state = {
             'success': False,
@@ -649,7 +656,7 @@ def forgetpwd(request):
         }
     _template = loader.get_template('forgetpwd.html')
     _context = {
-        'page_title': _('修改密码'),
+        'page_title': _(u'修改密码'),
         'state': _state,
         # 'islogin': _islogin,
     }
@@ -691,7 +698,7 @@ def changepassword(request):
     if _is_post:
         _state = __do_changepassword(request, _userinfo)
         if _state['success']:
-            return __result_message(request, _('Change successed'), _('密码修改成功！'))
+            return __result_message(request, _('Change successed'), _(u'密码修改成功！'))
     else:
         _state = {
             'success': False,
@@ -721,7 +728,7 @@ def edit(request):
         # return HttpResponseRedirect('/signin/')
     _template = loader.get_template('edit.html')
     _context = {
-        'page_title': _('账户信息'),
+        'page_title': _(u'账户信息'),
         'islogin': _islogin,
         # 'state': _state,
     }
@@ -738,7 +745,7 @@ def users_list(request):
     # check is login
     _islogin = __is_login(request)
 
-    _page_title = _('通信录')
+    _page_title = _(u'通信录')
     _users = UserProfile.objects.order_by('-addtime')
     try:
         page = request.GET.get('page', 1)
@@ -784,13 +791,13 @@ def friend_add(request, _username):
     try:
         _user = UserProfile.objects.get(id=_user_id)
     except:
-        return __result_message(request, _('对不起'), _('用户不存在.'))
+        return __result_message(request, _(u'对不起'), _(u'用户不存在.'))
 
     # check friend exist
     try:
         _friend = UserProfile.objects.get(username=_username)
         _user.friend.add(_friend)
-        return __result_message(request, _('成功'), _('添加成功.'))
+        return __result_message(request, _(u'成功'), _(u'添加成功.'))
     except:
         return __result_message(request, _('对不起'), _('用户不存在.'))
 
@@ -815,7 +822,7 @@ def friend_remove(request, _username):
     try:
         _user = UserProfile.objects.get(id=_user_id)
     except:
-        return __result_message(request, _('对不起'), _('用户不存在.'))
+        return __result_message(request, _(u'对不起'), _(u'用户不存在.'))
 
     # check friend exist
     try:
@@ -859,3 +866,4 @@ def create_code_img(request):
     request.session['check_code'] = code  # 将验证码存在服务器的session中，用于校验
     img.save(f, 'PNG')  # 生成的图片放置于开辟的内存中
     return HttpResponse(f.getvalue())  # 将内存的数据读取出来，并以HttpResponse返回
+

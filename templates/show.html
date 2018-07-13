@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load user_tags %}
+{% load staticfiles %}
+{% block title %}搜索结果{% endblock %}
+{% block head_link %}
+{% endblock %}
+{% block scripts %}
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+{% endblock %}
+{% block  main %}
+    <div class="list">
+        <h>事件列表：</h>
+        <ol>
+            {% for event in events %}
+                <li>
+                    <div>
+                        {% include 'showinfo.html' %}
+                    </div>
+                </li>
+            {% empty %}
+                <p>无事件</p>
+            {% endfor %}
+        </ol>
+    </div>
+{% endblock %}

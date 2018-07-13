@@ -12,7 +12,7 @@ import time
 #smtp.login(sender_qq, pwd)
 
 
-@shared_task
+@shared_task()
 def send_regist_success_mail(userinfo):
     mail_title = u'注册成功'
     mail_content = u'''您好！<br />
@@ -21,13 +21,13 @@ def send_regist_success_mail(userinfo):
     send(mail_title,mail_content,recipient_list)
 #ssl登录
 
-@shared_task
-def send_changeemail_success_mail(userinfo):
+@shared_task()
+def send_changeemail_success_mail(email):
     mail_title = u'邮箱修改成功'
     mail_content = u'''您好！<br />
     您已经成功修改牛牛用户邮箱<br />
    '''
-    recipient_list = userinfo['email']
+    recipient_list = email
     send(mail_title,mail_content,recipient_list)
 
 def send(mail_title,mail_content,recipient_list):

@@ -39,7 +39,8 @@ CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
 # CELERY_BROKER_TRANSPORT = 'redis'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_BACKEND = 'django-db'
+# CELERY_RESULT_BACKEND = 'django-db'
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
 CELERY_TIMEZONE = 'Asia/Shanghai'
 # celery flower --broker=redis://guest:guest@localhost:6379/0
 
@@ -95,6 +96,14 @@ CACHE_BACKEND = 'locmem:///'
 SECRET_KEY = '&a*2eokltx!i@0ohfk=gp(98z^8po#poq2g8r__d2b)-^gvmn0'
 
 # List of callables that know how to import templates from various sources.
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.weibo.WeiboOAuth2',
+    'social_core.backends.qq.QQOAuth2',
+    'social_core.backends.weixin.WeixinOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -104,6 +113,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     #    'django.middleware.doc.XViewMiddleware',
     'django.middleware.gzip.GZipMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
 )
 
 ROOT_URLCONF = 'shejiao.urls'
@@ -125,6 +135,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.csrf',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
         'DIRS': [
@@ -154,10 +167,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'yonghu',
     'utils',
-    'xadmin',
-    'crispy_forms',
     'pure_pagination',
     'django_celery_results',
+    'social_django',
+    'tinymce',
+    'haystack',
 )
 
 DATABASES = {
@@ -169,5 +183,25 @@ DATABASES = {
         'PASSWORD': '123456',  # Not used with sqlite3.
         'HOST': '127.0.0.1',  # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '3306',  # Set to empty string for default. Not used with sqlite3.
+        # 'OPTIONS':{'init_command':'SET default_storage_engine=INNODB;'},
     }
 }
+
+
+SOCIAL_AUTH_WEIBO_KEY = '2419266061'
+SOCIAL_AUTH_WEIBO_SECRET = '7c7c5c820968e699d30a7dd3fc48c775'
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/index'
+
+AUTH_USER_MODEL = "yonghu.Userprofile"
+
+HAYSTACK_CONNECTIONS = {
+    'default':{
+        'ENGINE':'haystack.backends.whoosh_cn_backend.WhooshEngine',
+        'PATH':os.path.join(WEB_PATH, 'whoosh_index'),
+    }
+}
+
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 6

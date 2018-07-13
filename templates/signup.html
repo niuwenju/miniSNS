@@ -9,7 +9,7 @@
     <div class="fl form-box">
         <h2>用户注册</h2>
         <form action="/signup/" method="post">
-            {#                    <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />#}
+            {% csrf_token %}
             <div class="form-group marb20">
                 <label>邮&nbsp;&nbsp;&nbsp;箱</label>
                 <input type="text" name="email" value="{{ state.form.email }}" size="12" placeholder="请输入邮箱"/>
@@ -38,6 +38,9 @@
             <input class="btn btn-blue" id="jsLoginBtn" type="submit" value="注册"/>
         </form>
         <div class="form-p">已有牛牛帐号？<a href="/signin">[立即登录]</a></div>
+        <div class="form-p1">
+            <a href="/login/weibo/"><img src="/statics/images/login.png" alt="SheJiao"/></a>
+        </div>
     </div>
 {#    </div>#}
 {#<div class="form">#}

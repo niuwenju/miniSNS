@@ -696,7 +696,7 @@ input:focus {
 /*}*/
 .form-p {
     font-size: 8px;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .form-p > a {
@@ -704,6 +704,19 @@ input:focus {
 }
 
 .form-p > a:hover {
+    color: #666;
+}
+
+.form-p1 {
+    font-size: 8px;
+    /*position: absolute;*/
+}
+
+.form-p1 > a {
+    color: #fa8341;
+}
+
+.form-p1 > a:hover {
     color: #666;
 }
 

@@ -1,0 +1,18 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+{% load user_tags %}
+{% load staticfiles %}
+{% load common_tags %}
+<div class="face">
+    <img src="{{ user.face|face }}" class="face75" />
+</div>
+<ul class="right">
+    <li>昵称:{{ user.username }}</li>
+    <li>
+        <a href="{{ user.url }}">个人主页</a>
+            <span><a href="{% url 'shejiao-yonghu-views-friend_add' user.username %}" title="添加好友">添加好友</a></span>
+    </li>
+{#    <li>{{ friend.about }}</li>#}
+</ul>

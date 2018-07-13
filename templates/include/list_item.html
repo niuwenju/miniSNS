@@ -6,7 +6,7 @@
 <p class="message">
     <span class="face"><img src="{{ item.user.face|face16 }}" class="face16" /></span>
     <a>{{ item.user.username }}</a>
-    {{ item.message|urlize|slice:":10" }}... <a class="more" href="{% url 'shejiao-yonghu-views-detail' item.id %}">详情...</a>
+    {{ item.message|safe|urlize|slice:":30" }} <a class="more" href="{% url 'shejiao-yonghu-views-detail' item.id %}">详情...</a>
 <p>
 <p class="info">
     <span class="date">{{ item.addtime|timesince }} 前,</span>

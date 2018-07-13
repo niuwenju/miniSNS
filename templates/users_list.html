@@ -6,10 +6,9 @@
 {% block head_link %}
 {% endblock %}
 {% block  main %}
-    <form action="/friends/" method="post">
-        {#                    <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />#}
+    <form action="/search/" method="get">
         <div class="form-gro marb20">
-            <input class="aa" name="search" type="text" placeholder="查找朋友"/>
+            <input class="aa" name="q" type="text" placeholder="查找朋友"/>
             <input class="bn bn-blue" id="jsLoginBtn" type="submit" value=""/>
         </div>
     </form>
